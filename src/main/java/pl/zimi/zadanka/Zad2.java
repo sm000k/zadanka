@@ -23,31 +23,32 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 public class Zad2 {
     static List<Integer> getInput() {
         List<Integer> inputNumbers = new ArrayList<>();
-        String inputLine;
-        String inputLineNoBrackets;
+
 
         Scanner scanner = new Scanner(System.in);
-        inputLine = scanner.next();
+        String inputLine = scanner.next();
 
-        inputLineNoBrackets = inputLine.replaceAll("[\\]\\[]", "");
+        String inputLineNoBrackets = inputLine.replaceAll("[\\]\\[]", "");
         String[] splicedString = inputLineNoBrackets.split(",");
         for (String s : splicedString) {
             inputNumbers.add(Integer.parseInt(s));
         }
-        Collections.sort(inputNumbers);
         return inputNumbers;
     }
 
-    //System.out.println
-    static Integer findMissingNumber(List<Integer> l) {
+    public int missingNumber(int[] nums) {
+        List<Integer> l = new ArrayList<>(nums.length);
+        for (int i : nums) {
+            l.add(i);
+        }
+        Collections.sort(l);
         Integer i = 0;
-        Integer k = 0;
 
-        if (l.get(0) == k) {
+        if (l.get(0).equals(0)) {
             while (l.get(i).equals(i)) {
                 i++;
 
-                if (i.intValue() == l.size()) {
+                if (i.equals(l.size())) {
                     break;
                 }
             }
@@ -55,14 +56,13 @@ public class Zad2 {
         return i;
     }
 
-    ;
-
     public static void main(String[] args) {
         List<Integer> inputNumbers = new ArrayList<>();
         inputNumbers = getInput();
-        Integer x = findMissingNumber(inputNumbers);
-        System.out.println(x);
+        //        Integer x = findMissingNumber(inputNumbers);
+        System.out.println(new Solution().missingNumber(inputNumbers.toArray(new Integer[inputNumbers.size()]))););
+    }
 
-
+    private static class Solution {
     }
 }
