@@ -21,7 +21,12 @@ public class Main {
 //        );
 //    }
 
-    static List<Integer> processData(List<String> input) {
+    /**
+     *
+     * @param input magiczny parametr
+     * @return coś zwaraca
+     */
+    public static List<Integer> processData(List<String> input) {
         List<Integer> possitiveStrings = new ArrayList<>();
         for (String s : input) {
             if (s.contains("1") && s.contains("2") && s.contains("3")) {
@@ -37,22 +42,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Integer n = 0;
-        System.out.println("Give number of n");
-        Scanner scanner = new Scanner(System.in);
-        n = Integer.parseInt(scanner.nextLine());
-        System.out.println("Give " + n + " numbers");
-        List<String> listStrings = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            listStrings.add(scanner.nextLine());
-        }
-
-        List<Integer> possitiveIntegers = processData(listStrings);
-
-        for (Integer x : possitiveIntegers) {
-            System.out.println(x);
-
-        }
+        System.out.println(processData(Arrays.asList("635", "221133", "123", "74")).equals(Arrays.asList(123, 221133)));
+        System.out.println(processData(Arrays.asList("635", "221133", "123", "74")).equals(Arrays.asList(123, 221133)));
+//
+//
+//        Integer n = 0;
+//        System.out.println("Give number of n");
+//        Scanner scanner = new Scanner(System.in);
+//        n = Integer.parseInt(scanner.nextLine());
+//        System.out.println("Give " + n + " numbers");
+//        List<String> listStrings = new ArrayList<>();
+//        for (int i = 0; i < n; i++) {
+//            listStrings.add(scanner.nextLine());
+//        }
+//
+//        List<Integer> possitiveIntegers = processData(listStrings);
+//
+//        for (Integer x : possitiveIntegers) {
+//            System.out.println(x);
+//
+//        }
 
     }
 
