@@ -37,7 +37,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int n = 0;
+        Integer n = 0;
         System.out.println("Give number of n");
         Scanner scanner = new Scanner(System.in);
         n = Integer.parseInt(scanner.nextLine());
@@ -51,6 +51,7 @@ public class Main {
 
         for (Integer x : possitiveIntegers) {
             System.out.println(x);
+
         }
 
     }

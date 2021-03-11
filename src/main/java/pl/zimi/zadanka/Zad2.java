@@ -36,7 +36,7 @@ public class Zad2 {
         return inputNumbers;
     }
 
-    public int missingNumber(int[] nums) {
+    public int missingNumber( Integer [] nums) {
         List<Integer> l = new ArrayList<>(nums.length);
         for (int i : nums) {
             l.add(i);
@@ -60,9 +60,8 @@ public class Zad2 {
         List<Integer> inputNumbers = new ArrayList<>();
         inputNumbers = getInput();
         //        Integer x = findMissingNumber(inputNumbers);
-        System.out.println(new Solution().missingNumber(inputNumbers.toArray(new Integer[inputNumbers.size()]))););
+        System.out.println(new Zad2().missingNumber(inputNumbers.toArray(new Integer[inputNumbers.size()])));
     }
 
-    private static class Solution {
-    }
+
 }
