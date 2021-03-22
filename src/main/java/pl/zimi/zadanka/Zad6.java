@@ -1,5 +1,10 @@
 package pl.zimi.zadanka;
 
+/*
+    Source:
+    https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+ */
+
 public class Zad6 {
     public int removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
