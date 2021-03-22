@@ -69,5 +69,12 @@ public class Zad6Test {
         //[-1,0,3]
         Assertions.assertEquals(3,object.removeDuplicates(nums));
     }
+    @Test
+    void oneTwoThree (){
+        Zad6 object = new Zad6();
+        int[] nums = {1,2,3};
+        //[-1,0,3]
+        Assertions.assertEquals(3,object.removeDuplicates(nums));
+    }
 
 }
