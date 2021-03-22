@@ -9,7 +9,7 @@ public class Zad6 {
         int numsMin = nums[0];
         int numsMax = nums[numsLen];
         int uniqueNumbersCounter = 0;
-        int tempPreviousNumber = -1;
+        int tempPreviousNumber = 1000000;
         int i = 0;
         for (int number : nums) {
             if (tempPreviousNumber != number) {

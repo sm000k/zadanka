@@ -62,5 +62,12 @@ public class Zad6Test {
         int[] nums = {1, 1 };
         Assertions.assertEquals(1,object.removeDuplicates(nums));
     }
+    @Test
+    void minusOneTest (){
+        Zad6 object = new Zad6();
+        int[] nums = {-1,0,0,0,0,3,3 };
+        //[-1,0,3]
+        Assertions.assertEquals(3,object.removeDuplicates(nums));
+    }
 
 }
