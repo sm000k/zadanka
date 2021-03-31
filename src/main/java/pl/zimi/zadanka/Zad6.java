@@ -13,7 +13,7 @@ public class Zad6 {
         int numsLen = nums.length - 1;
         int numsMax = nums[numsLen];
         int uniqueNumbersCounter = 0;
-        int tempPreviousNumber = -1000000;
+        int tempPreviousNumber = Integer.MIN_VALUE;
         int i = 0;
 
         for (int number : nums) {
@@ -24,11 +24,11 @@ public class Zad6 {
             if (number == numsMax) break;
         }
         while (nums[i + 1] != numsMax) {
-             while (nums[i] == nums[i + 1]) {
-                 for (int j = i + 1; j < numsLen  ; j++) {
-                 nums[j] = nums[j + 1 ];
-                 }
-             }
+            while (nums[i] == nums[i + 1]) {
+                for (int j = i + 1; j < numsLen; j++) {
+                    nums[j] = nums[j + 1];
+                }
+            }
             i++;
         }
         for (
