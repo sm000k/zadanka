@@ -16,9 +16,19 @@ public class Zad12 {
             if (!occurrenceList.contains((Integer) nums[i])) {
                 occurrenceList.add(nums[i]);
             } else {
-                occurrenceList.remove((Integer)nums[i]);
+                occurrenceList.remove((Integer) nums[i]);
             }
         }
         return occurrenceList.get(0);
     }
+
+    public int singleNumberXor(int[] nums) {
+        int a = 0;
+        for (int i : nums) {
+            a ^= i;
+            System.out.println(a);
+        }
+        return a;
+    }
+
 }

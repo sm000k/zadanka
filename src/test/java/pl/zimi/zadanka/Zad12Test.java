@@ -16,4 +16,10 @@ public class Zad12Test {
 
         Assertions.assertEquals(4,object.singleNumber(new int[] {4,1,2,1,2}));
     }
+    @Test
+    void xorTest(){
+        Zad12 object = new Zad12();
+
+        Assertions.assertEquals(4,object.singleNumberXor(new int[] {4,1,2,1,2}));
+    }
 }
